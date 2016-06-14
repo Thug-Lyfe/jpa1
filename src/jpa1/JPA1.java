@@ -5,6 +5,7 @@
  */
 package jpa1;
 
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 /**
@@ -17,15 +18,16 @@ public class JPA1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
         Persistence.generateSchema("PU", null);
-        ControllerFacade con = new ControllerFacade();
-        con.CreateUser("marco", "dick@dickerdick.com");
-        con.createProject("awesomeStuff", "name says it all");
-        ProjectUser user = con.FindUser(1);
-        Project project = con.findProject(1);
-        con.assignUser(user.getId(), project.getId());
-        con.CreateTaskAndAssignToProject("yolo", project.getId(), "yololololo", 5);
-        con.emClose();
+//        ControllerFacade con = new ControllerFacade();
+//        con.CreateUser("marco", "dick@dickerdick.com");
+//        con.createProject("awesomeStuff", "name says it all");
+//        ProjectUser user = con.FindUser(1);
+//        Project project = con.findProject(1);
+//        con.assignUser(user.getId(), project.getId());
+//        con.CreateTaskAndAssignToProject("yolo", project.getId(), "yololololo", 5);
+//        con.emClose();
     }
     
 }
